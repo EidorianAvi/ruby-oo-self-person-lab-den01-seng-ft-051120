@@ -61,7 +61,7 @@ class Person
     p "Hi #{friend.name}! It's #{self.name}. How are you?"
   end 
   
-  def start_conversation person topic 
+  def start_conversation person, topic 
     if topic == "politics"
       self.happiness -= 5 
       person.happiness -= 5 
