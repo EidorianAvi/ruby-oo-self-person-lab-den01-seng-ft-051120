@@ -55,7 +55,13 @@ class Person
     p "♪ another one bites the dust ♫"
   end 
   
-  def call_friend 
+  def call_friend friend 
+    friend.happiness += 3 
+    self.happiness += 3
+    if self
+      self.call_friend "Felix"
+      p "Hi Felix! It's Stella. How are you?"
+    end
   end 
   
   def start_conversation
